@@ -8,7 +8,8 @@
 </head>
 <body>
 
-<h1> PROSPECT Career Outline Tool </h1>
+
+<img src = "{% static 'Logo Tool.png' %}">
 
 <form>
   <fieldset>
@@ -16,18 +17,34 @@
   
   First name:<br>
   <input type="text" name="firstname"><br>
-  Last name:<br>
+  
+  Last name:<br> 
   <input type="text" name="lastname"><br>
+  
+  Gender: <br>
+  <input type = "radio" name = "Gender" value = "Male" checked> Male<br>
+  <input type = "radio" name = "Gender" value = "Female"> Female<br>
+  
   Age: <br>
   <input type = "text" name = "Age"><br>  
+  
+  GPA: <br>
+  <input type = "radio" name = "GPA" value = "0" checked> 0<br>
+  <input type = "radio" name = "GPA" value = "1" > 1<br>
+  <input type = "radio" name = "GPA" value = "2" > 2<br>
+  <input type = "radio" name = "GPA" value = "3" > 3<br>
+  <input type = "radio" name = "GPA" value = "4" > 4<br>
+
   Major: <br>
   <input type = "text" name = "major"><br>
-  Major 2: <br>
+  
+  Major 2/Minor: <br>
   <input type = "text" name = "major2"><br>
-  Internship: <br>
+  
+  Paid Internship: <br>
   <input type = "radio" name = "Internship" value = "yes" checked> Yes<br>
   <input type = "radio" name = "Internship" value = "no"> No<br>  <br>
-
+  
   <input type = "submit" value = "Submit"><br>    
   </fieldset>
 </form>
