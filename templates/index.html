@@ -11,12 +11,15 @@
 
 <img src = "{% static 'MyLogo.png' %}">
 
-<form>
+<form = method post>
+  {% csrf_token %}
+  {{form}}
+
   <fieldset>
   <legend>Personal Information:</legend>
-  
+
   First name:<br>
-  <input type="text" name="firstname"><br>
+  <input type="text" name="firstname" value = {{ current_name }} ><br>
   
   Last name:<br> 
   <input type="text" name="lastname"><br>

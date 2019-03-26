@@ -3,17 +3,13 @@
 from django.shortcuts import render
 from django.template import RequestContext
 from django.http import HttpResponse
+from .forms import NameForm
+from django.http import HttpResponseRedirect
 
-def home(request):
-	return HttpResponse("Home Page")
-
-def hello(request):
-    return HttpResponse("Hello world") 
 
 def index(request):
     return render(request, 'index.html')
 	
-def myworld(request):
-	return render(request, 'myworld.html')
-	
-	
+		
+
+
