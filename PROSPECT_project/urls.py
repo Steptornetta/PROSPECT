@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
 from myapp.views import index
-
+from myapp.views import response
+from myapp.views import ProspectView
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-	path('', index),
+	path('', ProspectView),
+	url(r'^response/$', response), 
 
 ]

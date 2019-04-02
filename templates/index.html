@@ -11,20 +11,19 @@
 
 <img src = "{% static 'MyLogo.png' %}">
 
-<form = method post>
+<form action = '/response/' method = post>
   {% csrf_token %}
-  {{form}}
-
+  
   <fieldset>
   <legend>Personal Information:</legend>
 
   First name:<br>
-  <input type="text" name="firstname" value = {{ current_name }} ><br>
-  
+  <input type="text" name="firstname" id = "FN" ><br>
+   
   Last name:<br> 
   <input type="text" name="lastname"><br>
   
-  Gender: <br>
+  Gender: <br> 
   <input type = "radio" name = "Gender" value = "Male" checked> Male<br>
   <input type = "radio" name = "Gender" value = "Female"> Female<br>
   
