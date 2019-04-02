@@ -1,0 +1,57 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type = "text/css" href="{% static 'css/indexstyle.css' %}" media = "screen" />
+</head>
+<body>
+
+
+<img src = "{% static 'MyLogo.png' %}">
+
+<form action = '/response/' method = post>
+  {% csrf_token %}
+
+  <fieldset>
+  <legend>Personal Information:</legend>
+
+  First name:<br>
+  <input type="text" name="firstname" value = {{ current_name }} ><br>
+  
+  Last name:<br> 
+  <input type="text" name="lastname"><br>
+  
+  Gender: <br>
+  <input type = "radio" name = "Gender" value = "Male" checked> Male<br>
+  <input type = "radio" name = "Gender" value = "Female"> Female<br>
+  
+  Age: <br>
+  <input type = "text" name = "Age"><br>  
+  
+  GPA: <br>
+  <input type = "radio" name = "GPA" value = "0" checked> 0<br>
+  <input type = "radio" name = "GPA" value = "1" > 1<br>
+  <input type = "radio" name = "GPA" value = "2" > 2<br>
+  <input type = "radio" name = "GPA" value = "3" > 3<br>
+  <input type = "radio" name = "GPA" value = "4" > 4<br>
+
+  Major: <br>
+  <input type = "text" name = "major"><br>
+  
+  Major 2/Minor: <br>
+  <input type = "text" name = "major2"><br>
+  
+  Paid Internship: <br>
+  <input type = "radio" name = "Internship" value = "yes" checked> Yes<br>
+  <input type = "radio" name = "Internship" value = "no"> No<br>  <br>
+  
+  <input type = "submit" value = "Submit"><br>    
+  </fieldset>
+</form>
+
+<h2> Predicted Annual Salary: $50,000 - $55,000 </h2>
+
+</body>
+</html>
