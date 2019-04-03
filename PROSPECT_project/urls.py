@@ -23,7 +23,7 @@ from myapp.views import ProspectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-	path('', ProspectView),
+	path('', index),
 	url(r'^response/$', response), 
 
 ]

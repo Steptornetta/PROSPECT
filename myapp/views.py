@@ -18,8 +18,11 @@ def ProspectView(request):
 		print("hello")
 		if form.is_valid():
 			FirstName = form.cleaned_data['yourfirst_name']
+			LastName = form.cleaned_data['yourlast_name']
 			print(FirstName)
-			
+			print(LastName)
+			print(form)
+
 	form = ProspectForm()
 	
 	return render(request, 'formtemplate.html', {'form': form})
